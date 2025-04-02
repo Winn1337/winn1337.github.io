@@ -56,6 +56,25 @@
             --amt: 100px;
             margin-top: var(--amt);
         }
+
+        #holder {
+            margin: auto;
+            width: auto;
+            max-width: 256px;
+            max-height: 256px;
+            /*overflow: hidden;*/
+        }
+
+        #holder img {
+            width: 100%;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+
+        #holder img:hover {
+            transform: scale(1.1,1.1);
+        }
     </style>
 </head>
 
@@ -67,7 +86,15 @@
             I'm learning how to write html and stuff :D Check back soon for something awesome!
         </p>
     </main>
-    <div class="space" style="--amt: 625px"></div>
+
+    <div class="space" style="--amt: 145px"></div>
+
+    <div id="holder" style="">
+        <a href="https://winn1337.itch.io" target="_blank"><img src=./icon.png></a>
+    </div>
+
+    <div class="space" style="--amt: 245px"></div>
+
     <footer>
         <h3 style="margin-bottom: -0.5em">Links</h3>
         <p style="word-spacing: 16px">
