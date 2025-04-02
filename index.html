@@ -9,17 +9,22 @@
     <link rel="icon" href="./icon.png" type="image/png">
 
     <style>
-        body {
+        html, body {
             background-color: #212f3c;
             color: #f2f3f4;
             font-family: Calibri;
+            margin: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
 
         main {
             display: block;
-            margin: 5%;
+            margin: 3% 5%;
             width: 35%;
             overflow-wrap: break-word;
+            flex: 1;
         }
 
         footer {
@@ -57,12 +62,33 @@
             margin-top: var(--amt);
         }
 
-        #holder {
+        ul {
+            list-style-type: none;
+            overflow: hidden;
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        li {
+            float: left;
+            padding: 0 5% 0 5%;
+        }
+
+        li p {
+            word-spacing: 16px
+        }
+
+        li h3 {
+            margin-bottom: -0.5em;
+        }
+
+        /*#holder {
             margin: auto;
             width: auto;
             max-width: 256px;
             max-height: 256px;
-            /*overflow: hidden;*/
         }
 
         #holder img {
@@ -70,42 +96,51 @@
             -webkit-transition: all 0.5s ease;
             -moz-transition: all 0.5s ease;
             transition: all 0.5s ease;
+        }*/
+
+        iframe {
+            -webkit-transition: all 0.25s ease;
+            -moz-transition: all 0.25s ease;
+            transition: all 0.25s ease;
         }
 
-        #holder img:hover {
-            transform: scale(1.1,1.1);
+        iframe:hover {
+            transform: scale(1.025,1.025);
         }
     </style>
 </head>
 
 <body>
     <main>
-        <h1>SITE UNDER CONSTRUCTION</h1>
+        <h1>WINN1337</h1>
         <p>
             Please don't mind the digital dust - my little corner of the internet is still under construction! 🚧💻
-            I'm learning how to write html and stuff :D Check back soon for something awesome!
+            I'm learning html and css at the moment :D Check back soon for something awesome!
         </p>
-        <br />
         <br />
         <br />
         <h2>Games developed by me</h2>
-        <iframe frameborder="0" src="https://itch.io/embed/3433802?linkback=true&amp;bg_color=e4d3aa&amp;fg_color=001c41&amp;link_color=1b5db3&amp;border_color=5e789a" width="552" height="167"></iframe>
+        <!-- Itch.io widget -->
+        <iframe frameborder="0" src="https://itch.io/embed/3433802?linkback=true&amp;bg_color=e4d3aa&amp;fg_color=001c41&amp;link_color=1b5db3&amp;border_color=5e789a;b_radius=20;" width="552" height="167"></iframe>
     </main>
 
-
-    <div class="space" style="--amt: 325px"></div>
-
     <footer>
-        <h3 style="margin-bottom: -0.5em">Links</h3>
-        <p style="word-spacing: 16px">
-            <a href="https://winn1337.itch.io" target="_blank">Itch.io</a>
-            <a href="https://www.github.com/Winn1337" target="_blank">Github</a>
-            <a href="https://www.linkedin.com/in/johanneswidén" target="_blank">LinkedIn</a>
-        </p>
-        <h3 style="margin-bottom: -0.5em;">Contact</h3>
-        <p style="word-spacing: 16px">
-            <a href="mailto:johanneswiden2003@gmail.com" target="_blank">johanneswiden2003@gmail.com</a>
-        </p>
+        <ul>
+            <li>
+                <h3>Links</h3>
+                <p>
+                    <a href="https://winn1337.itch.io" target="_blank">Itch.io</a>
+                    <a href="https://www.github.com/Winn1337" target="_blank">Github</a>
+                    <a href="https://www.linkedin.com/in/johanneswidén" target="_blank">LinkedIn</a>
+                </p>
+            </li>
+            <li>
+                <h3>Contact</h3>
+                <p>
+                    <a href="mailto:johanneswiden2003@gmail.com" target="_blank">johanneswiden2003@gmail.com</a>
+                </p>
+            </li>
+        </ul>
     </footer>
     <!--<script src="index.js"></script>-->
 </body>
