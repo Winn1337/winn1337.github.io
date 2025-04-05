@@ -1,147 +1,58 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Winn1337</title>
-    <!--<link rel="stylesheet" href="./style.css">-->
-    <link rel="icon" href="./icon.png" type="image/png">
-
-    <style>
-        @font-face {
-            font-family: Lato;
-            src: url(./Assets/Fonts/Lato/Lato-Regular.ttf);
-        }
-
-        html, body {
-            background-color: #212f3c;
-            color: #f2f3f4;
-            font-family: Lato;
-            font-size: 110%;
-            margin: 0;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        main {
-            display: block;
-            margin: 3% 5%;
-            width: 35%;
-            overflow-wrap: break-word;
-            flex: 1;
-        }
-
-        footer {
-            bottom: 0;
-            text-align: center;
-            font-size: 90%;
-        }
-
-        a:link {
-            color: #85c1e9;
-            background-color: transparent;
-            text-decoration: none;
-        }
-
-        a:visited {
-            color: #85c1e9;
-            background-color: transparent;
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: #48c9b0;
-            background-color: transparent;
-            text-decoration: underline;
-        }
-
-        .space {
-            --amt: 100px;
-            margin-top: var(--amt);
-        }
-
-        ul {
-            list-style-type: none;
-            overflow: hidden;
-            list-style-type: none;
-            display: flex;
-            justify-content: center;
-            padding: 0;
-        }
-
-        li {
-            float: left;
-            padding: 0 5% 0 5%;
-        }
-
-        li p {
-            word-spacing: 16px
-        }
-
-        li h3 {
-            margin-bottom: -0.5em;
-        }
-
-        /*#holder {
-            margin: auto;
-            width: auto;
-            max-width: 256px;
-            max-height: 256px;
-        }
-
-        #holder img {
-            width: 100%;
-            -webkit-transition: all 0.5s ease;
-            -moz-transition: all 0.5s ease;
-            transition: all 0.5s ease;
-        }*/
-
-        iframe {
-            -webkit-transition: all 0.25s ease;
-            -moz-transition: all 0.25s ease;
-            transition: all 0.25s ease;
-        }
-
-        iframe:hover {
-            transform: scale(1.025,1.025);
-        }
-    </style>
+    <link rel="icon" href="./icon.png" type="image/png" />
+    <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
     <main>
-        <h1>Winnie</h1>
-        <p>
-            Please don't mind the digital dust - my little corner of the internet is still under construction! 🚧💻
-            I'm learning html and css at the moment :D Check back soon for something awesome!
-        </p>
-        <br />
-        <br />
-        <h2>Games developed by me</h2>
-        <!-- Itch.io widget -->
-        <iframe frameborder="0" src="https://itch.io/embed/3433802?linkback=true&amp;bg_color=e4d3aa&amp;fg_color=001c41&amp;link_color=1b5db3&amp;border_color=5e789a;b_radius=20;" width="552" height="167"></iframe>
+        <!-- Header -->
+        <header>
+            <h1>Winnie</h1>
+            <p class="tagline">Still under construction 🚧💻</p>
+        </header>
+
+        <!-- Intro Section -->
+        <section class="intro">
+            <p>
+                Please don't mind the digital dust - my little corner of the internet is still under construction!
+                I'm learning HTML and CSS at the moment :D Check back soon for something awesome!
+            </p>
+        </section>
+
+        <!-- Games Section -->
+        <section class="game-list">
+            <h2>Games developed by me</h2>
+            <div class="game-card">
+                <iframe frameborder="0" src="https://itch.io/embed/3433802?linkback=true&amp;bg_color=e4d3aa&amp;fg_color=001c41&amp;link_color=1b5db3&amp;border_color=5e789a;b_radius=20;" width="552" height="167"></iframe>
+            </div>
+        </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <ul>
-            <li>
-                <h3>Links</h3>
-                <p>
-                    <a href="https://winn1337.itch.io" target="_blank">Itch.io</a>
-                    <a href="https://www.github.com/Winn1337" target="_blank">Github</a>
-                    <a href="https://www.linkedin.com/in/johanneswidén" target="_blank">LinkedIn</a>
-                </p>
-            </li>
-            <li>
-                <h3>Contact</h3>
-                <p>
-                    <a href="mailto:johanneswiden2003@gmail.com" target="_blank">johanneswiden2003@gmail.com</a>
-                </p>
-            </li>
-        </ul>
+        <div class="footer-links">
+            <h3>Links</h3>
+            <p>
+                <a href="https://winn1337.itch.io" target="_blank">Itch.io</a>
+                <a href="https://www.github.com/Winn1337" target="_blank">Github</a>
+                <a href="https://www.linkedin.com/in/johanneswid%C3%A9n" target="_blank">LinkedIn</a>
+            </p>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contact</h3>
+            <p>
+                <a href="mailto:johanneswiden2003@gmail.com">johanneswiden2003@gmail.com</a>
+            </p>
+        </div>
     </footer>
-    <!--<script src="index.js"></script>-->
+
+    <script src="index.js"></script>
 </body>
 </html>
