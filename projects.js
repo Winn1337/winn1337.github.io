@@ -57,7 +57,7 @@ export const projects = [
         Will add more details about the process when I have the time.
         </p>
         `,
-        staticThumbnail: "Assets/Images/projectSalamanoid.png",
+        staticThumbnail: "Assets/Images/projectsalamanoid.png",
         teamSize: 9,
         language: ["C#", "Unity"]
     },
