@@ -1,25 +1,34 @@
-fetch('./projects.js?v=' + new Date().getTime())
-    .then(response => response.json())
-    .then(data => {
-        const projects = data;
+function loadProjectsScript(callback) {
+    const script = document.createElement("script");
+    script.src = './projects.js?v=' + new Date().getTime(); // Add cache-busting query string
+    script.type = "module";
+    script.onload = callback;
+    document.head.appendChild(script);
+}
 
-        const container = document.getElementById("project-container");
-        if (!container) return;
+loadProjectsScript(() => {
+    // Wait for the script to load, then access the `projects` array
+    import('./projects.js?v=' + new Date().getTime())
+        .then(module => {
+            const projects = module.projects;
 
-        projects.forEach(project => {
-            const card = document.createElement("a");
-            card.classList.add("project-card");
-            card.href = `project.html?title=${encodeURIComponent(project.title)}`;
-            card.innerHTML = `
-            <img src="${project.staticThumbnail}" alt="${project.title}" />
-            <p></p>
-            <h>${project.title} (${project.year})</h>
-            <p>${project.summary}</p>
-        `;
+            const container = document.getElementById("project-container");
+            if (!container) return;
 
-            container.appendChild(card);
-        });
-    })
+            projects.forEach(project => {
+                const card = document.createElement("a");
+                card.classList.add("project-card");
+                card.href = `project.html?title=${encodeURIComponent(project.title)}`;
+                card.innerHTML = `
+                    <img src="${project.staticThumbnail}" alt="${project.title}" />
+                    <p></p>
+                    <h>${project.title} (${project.year})</h>
+                    <p>${project.summary}</p>
+                `;
+
+                container.appendChild(card);
+            });
+        })
     .then(() => {
         const main = document.querySelector("body");
         const iframe = document.querySelector("iframe");
@@ -40,42 +49,4 @@ fetch('./projects.js?v=' + new Date().getTime())
     }
     })
     .catch(error => console.error('Error loading projects:', error));
-
-// document.addEventListener("DOMContentLoaded", () => {
-
-//     const container = document.getElementById("project-container");
-
-//     if (!container) return;
-
-//     projects.forEach(project => {
-//         const card = document.createElement("a");
-//         card.classList.add("project-card");
-//         card.href = `project.html?title=${encodeURIComponent(project.title)}`;
-//         card.innerHTML = `
-//         <img src="${project.staticThumbnail}" alt="${project.title}" />
-//         <p></p>
-//         <h>${project.title} (${project.year})</h>
-//         <p>${project.summary}</p>
-//     `;
-
-//         container.appendChild(card);
-//     });
-
-//     const main = document.querySelector("body");
-//     const iframe = document.querySelector("iframe");
-
-//     if (iframe) {
-//         iframe.addEventListener("load", () => {
-
-//             requestAnimationFrame(() => {
-//                 main.style.opacity = 1;
-//             });
-//         });
-//     } else {
-//         // Fallback if iframe is not found
-
-//         requestAnimationFrame(() => {
-//             main.style.opacity = 1;
-//         });
-//     }
-// });
+});

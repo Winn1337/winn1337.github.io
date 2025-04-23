@@ -1,4 +1,4 @@
-export const projects = [
+export var projects = [
     // {
     //     title: "TopDogEngine",
     //     year: 2025,
