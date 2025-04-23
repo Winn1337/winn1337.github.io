@@ -1,4 +1,4 @@
-import { projects } from './projects.js';
+import { projects } from `./projects.js?v='${new Date().getTime()}`;
 
 // Fade in
 document.addEventListener("DOMContentLoaded", () => {
