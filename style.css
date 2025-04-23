@@ -33,6 +33,19 @@ body {
     transition: opacity 0.2s ease-in;
 }
 
+p {
+    line-height: 1.4;
+}
+
+.project-detail p {
+    text-align: justify;
+}
+
+h3 {
+    margin-top: 2rem;
+    margin-bottom: -0.5rem;
+}
+
 main {
     display: block;
     margin: 3% auto;
@@ -41,7 +54,7 @@ main {
     flex: 1;
 }
 
-h2 {
+.project-list h2 {
     text-align: center;
 }
 

@@ -15,12 +15,24 @@ document.addEventListener("DOMContentLoaded", () => {
         container.innerHTML = `<p>Project not found.</p>`;
         return;
     }
+    document.title = `${project.title}`;
+    
+    var link = document.querySelector("link[rel~='icon']");
+    if (!link) {
+        link = document.createElement('link');
+        link.rel = 'icon';
+        document.head.appendChild(link);
+    }
+    link.href = `${project.staticThumbnail}`;
 
     container.innerHTML = `
-    <h1>${project.title} ${project.year ? `(${project.year})` : ''}
-    </h1><p><strong>Team Size:</strong> ${project.teamSize ?? 'N/A'}</p>
+    
+    <h1>${project.title} ${project.year ? `(${project.year})` : ''}</h1>
+    <p style="margin-top: -15px; margin-bottom: 30px"><i>${project.summary}</i></p>
+    <p><strong>Team Size:</strong> ${project.teamSize ?? 'N/A'}</p>
     <p><strong>Languages:</strong> ${project.language?.join(', ') || 'N/A'}</p>
-    <br>
+    <img src="${project.staticThumbnail}" style="position: absolute; top: 66px; right: 25%; width: 400px; height: auto; z-index: 10; border-radius:6px;"/>
+    <br><br><br><br><br><br>
     ${project.fullDescription ? `${project.fullDescription}` : ''}
     `;
     
