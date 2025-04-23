@@ -1,4 +1,5 @@
-import { projects } from `./projects.js?v=${new Date().getTime()}`;
+//import { projects } from `./projects.js?v=${new Date().getTime()}`;
+import { projects } from `./projects.js`;
 
 function getProjectByTitle(title) {
     return projects.find(p => p.title === title);
