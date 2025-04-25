@@ -2,7 +2,7 @@
 // This file is loaded in both index.js and project-detail.js.
 
 export var projects = [
-    { // TopDogEngine
+    { // TopDogEngine - Not included
         title: "TopDogEngine",
         year: 2025,
         summary: "A single-file 3D game prototyping framework.",
@@ -151,7 +151,7 @@ export var projects = [
         teamSize: 9,
         language: ["C#", "Unity"]
     },
-    { // WFC RTS
+    { // WFC RTS - Not included
         title: "WFC RTS",
         year: "2024",
         summary: "A Wave Function Collapse RTS level generator.",
@@ -229,7 +229,7 @@ export var projects = [
         teamSize: 6,
         language: ["C#", "Unity"]
     },
-    { // Untitled Physics Game
+    { // Untitled Physics Game - Not included
         title: "Untitled Physics Game",
         year: "2024",
         summary: "A physics based car game.",
