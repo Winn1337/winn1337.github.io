@@ -15,7 +15,8 @@ loadProjectsScript(() => {
             const container = document.getElementById("project-container");
             if (!container) return;
 
-            projects.forEach(project => {
+            projects.filter(project => project.staticThumbnail)
+            .forEach(project => {
                 const card = document.createElement("a");
                 card.classList.add("project-card");
                 card.href = `project.html?title=${encodeURIComponent(project.title)}`;
@@ -29,6 +30,7 @@ loadProjectsScript(() => {
                 container.appendChild(card);
             });
         })
+    // Fade in after done loading
     .then(() => {
         const main = document.querySelector("body");
         const iframe = document.querySelector("iframe");
