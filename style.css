@@ -52,6 +52,11 @@ p {
     margin-bottom: -0.5rem;
 }
 
+em {
+    font-style: inherit;
+    color: var(--link-color);
+}
+
 .caption {
     margin-top: -0.1em;
     font-size: 0.7em;
@@ -183,6 +188,12 @@ a.project-card:hover {
 a.project-card img {
     width: 100%;
     /* border-radius: 8px; */
+}
+
+a.invalid {
+    opacity: 0.5;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
 }
 
 .project-detail{

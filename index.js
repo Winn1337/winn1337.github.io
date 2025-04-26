@@ -19,6 +19,10 @@ loadProjectsScript(() => {
             .forEach(project => {
                 const card = document.createElement("a");
                 card.classList.add("project-card");
+                if (String(project.fullDescription).length < 2000)
+                {
+                    card.classList.add("invalid");
+                }
                 card.href = `project.html?title=${encodeURIComponent(project.title)}`;
                 card.innerHTML = `
                     <img src="${project.staticThumbnail}" alt="${project.title}" />
