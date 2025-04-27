@@ -301,10 +301,22 @@ export var projects = [
         
         </p>
 
+        <p style="text-align:center;">
+        <img src="Assets/Images/2DPhysicsEngine/collision.gif"
+        width=100%
+        style="border-radius: 6px"/>
+        </p>
+
         <h3>External forces</h3>
         <h4>Wind</h4>
         <p>
         
+        </p>
+
+        <p style="text-align:center;">
+        <img src="Assets/Images/2DPhysicsEngine/wind.gif"
+        width=100%
+        style="border-radius: 6px"/>
         </p>
 
         <h4>Buoyancy</h4>
@@ -312,9 +324,21 @@ export var projects = [
         
         </p>
 
+        <p style="text-align:center;">
+        <img src="Assets/Images/2DPhysicsEngine/buoyancy.gif"
+        width=100%
+        style="border-radius: 6px"/>
+        </p>
+
         <h4>Explosions</h4>
         <p>
         
+        </p>
+
+        <p style="text-align:center;">
+        <img src="Assets/Images/2DPhysicsEngine/explosions.gif"
+        width=100%
+        style="border-radius: 6px"/>
         </p>
         `,
         staticThumbnail: "Assets/Images/2dphysicsengine.png",
