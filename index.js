@@ -19,7 +19,7 @@ loadProjectsScript(() => {
             .forEach(project => {
                 const card = document.createElement("a");
                 card.classList.add("project-card");
-                if (String(project.fullDescription).length < 2000)
+                if (String(project.fullDescription).length < 750)
                 {
                     card.classList.add("invalid");
                 }

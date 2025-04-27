@@ -35,14 +35,15 @@ loadProjectsScript(() => {
                 document.head.appendChild(link);
             }
             link.href = `${project.staticThumbnail}`;
-
+            //<img src="${project.staticThumbnail}" style="position: absolute; top: 66px; right: 25%; width: min(20%, 400px); height: auto; z-index: 0; border-radius:6px;"/>
             container.innerHTML = `
-            
+            <p>
+            <img src="${project.staticThumbnail}" style="width: min(450px, 35%); float: right; margin-bottom: -350px; border-radius: 6px;"/>
             <h1>${project.title} ${project.year ? `(${project.year})` : ''}</h1>
             <p style="margin-top: -15px; margin-bottom: 30px"><i>${project.summary}</i></p>
             <p><strong>Team Size:</strong> ${project.teamSize ?? 'N/A'}</p>
-            <p><strong>Languages:</strong> ${project.language?.join(', ') || 'N/A'}</p>
-            <img src="${project.staticThumbnail}" style="position: absolute; top: 66px; right: 25%; width: min(20%, 400px); height: auto; z-index: 0; border-radius:6px;"/>
+            <p><strong>Languages:</strong> ${project.language?.join(', ') || 'N/A'}</p>\
+            </p>
             <br><br><br><br><br>
             ${project.fullDescription ? `${project.fullDescription}` : ''}
             `;

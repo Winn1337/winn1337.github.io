@@ -106,6 +106,12 @@ export var projects = [
         The controller emulates <em>acceleration</em> and <em>drag forces</em> to make the movement less rigid. I also made sure to add <em>collision layers</em> so that the player does not collide with details and decorations in the environment, which could make the player get stuck and ruin the flow of the game.
         </p>
 
+        <p style="text-align:center;">
+        <img src="Assets/Images/ProjectSalamanoid/movement.gif"
+        width=100%
+        style="border-radius: 6px"/>
+        </p>
+
         <h4>Sprinting</h4>
         <p>
         Holding the sprint button sets the max speed to a set sprint speed. The player can only sprint forwards or diagonally forwards compared to the direction as they are facing. Sprinting consumes <em>stamina</em>, and cannot be performed when stamina is too low. The player cannot sprint while jumping, crouching or aiming down sights.
@@ -129,6 +135,12 @@ export var projects = [
         I implemented this by using a separate character controller for the climbing state. The climbing controller uses a similar approach to the <em>collide-and-slide algorithm</em>, but instead of projecting the movement along the plane of the collision, it snaps the player to the wall and <em>sets the up direction to the normal</em> of the wall.
         </p>
 
+        <p style="text-align:center;">
+        <img src="Assets/Images/ProjectSalamanoid/climbing.gif"
+        width=100%
+        style="border-radius: 6px"/>
+        </p>
+
         <h3>Music Manager</h3>
         <p>
         Some parts of the game have background music and the intensity of the music varies in different parts of the game. This is possible because the music is divided into layers that can be added or removed on demand to change the mood. Entering a new area will potentially activate or deactivate some <em>music layer</em> which will change the <em>perceived intensity</em> for the player.
@@ -140,6 +152,12 @@ export var projects = [
         <h3>Interactable Objects</h3>
         <p>
         The game has a lot of <em>interactable objects</em>, such as doors, drawers and cabinets. I created a system that allows designers to easily add door and drawer objects to the game. The system uses a simple interface that allows designers to specify how the object should move when interacted with and what sound should be played. I'm very hapy with how this turned out, as it allows designers to easily add interactivity to imported models as long as they are split into the right parts.
+        </p>
+
+        <p style="text-align:center;">
+        <img src="Assets/Images/ProjectSalamanoid/interactable.gif"
+        width=100%
+        style="border-radius: 6px"/>
         </p>
 
         <h3>Cheats</h3>
@@ -367,20 +385,35 @@ export var projects = [
 
         <h4>On Death</h4>
         <p>
-        The On Death behaviour is triggered when a goose runs out of health. It makes the goose tumble towards the ground and then <em>dissolve</em> and <em>despawn</em>. We decided to despawn the geese after dying since the game can technically go on forever. Not despawning the geese after some time could mean and infinite amount of <em>game objects</em> active at the same time, which is obviously not good for <em>performance</em>. The dissolving was made possible by <em>using a shader</em> and adjusting the parameters from <em>procedural noise</em> applied to the <em>alpha output</em>. This behaviour was also implemented to apply to the player death event. Making the goose tumble was a simple solution as I just needed to make the goose <em>ajust the pitch</em> to look slightly downwards and then <em>apply torque</em> to the goose to make it tumble. Although this was a simple solution, it turned out to be very effective and looked great in the game.
+        The On Death behaviour is triggered when a goose runs out of health. It makes the goose tumble towards the ground and then <em>dissolve</em> and <em>despawn</em>. We decided to despawn the geese after dying since the game can technically go on forever. Not despawning the geese after some time could mean and infinite amount of <em>game objects</em> active at the same time, which is obviously not good for <em>performance</em>. The dissolving was made possible by <em>using a shader</em> and adjusting the parameters from <em>procedural noise</em> applied to the <em>alpha output</em>.
+
+        <p>
+        This behaviour was also implemented to apply to the player death event. Making the goose tumble was a simple solution as I just needed to make the goose <em>ajust the pitch</em> to look slightly downwards and then <em>apply torque</em> to the goose to make it tumble. Although this was a simple solution, it turned out to be very effective and looked great in the game.
+        </p>
+
+        <p style="text-align:center;">
+        <img src="Assets/Images/TopGoose/ondeath.gif"
+        width=100%
+        style="border-radius: 6px"/>
         </p>
 
         <h3>Enemy Spawning</h3>
         <p>
         The enemy spawning implementation is quite simple, but vital to the game. There's a <em>counter</em> that counts down from a set time and when it reaches zero, a new enemy is spawned. When an enemy spawns, it has a set of <em>spawn points</em> to choose from. It start by checking all the spawn points and <em>filtering out</em> the ones that are too close to the player, and the ones that the player is looking towards by using the <em>dot product</em> of the <em>vector from the player to the spawnpoint</em> and the <em>forward vector of the player</em>. Out of all the spawn points that are left, the chosen spawn point is the one that has spawned the <em>least amount of enemies</em> to try to distribute the spawns evenly between the points.
-        </p>
 
         <h3>Map Boundary</h3>
         <p>
         We realized that we needed to limit the area where the player could fly, so we decided that the game needed some sort of <em>map boundary</em>. However, we did not want to just put a wall around the map because <em>we wanted the world to feel open</em>, and it would be very interruptive to the players experience if it suddenly flew into an invisible wall. I came up with a fun solution to this problem. I created <em>boats that patrol the edges</em> of the map and <em>fire missiles at the player</em> if they get too close. The player receives a <em>warning on the screen</em> when they are too close to the edge of the map so that they can avoid it.
         </p>
+
         <p>
         The missiles were implemented using a <em>homing missile</em> script that would make the missile follow the player until it hits them or the ground. This was probably the most fun and advanced part of the game to implement for me, since it involved <em>targeting math</em> so that the missiles could predict where the player would be when they hit them. I used a <em>quadratic equation</em> to calculate the time it would take for the missile to reach the player and then used that time to calculate where the player would be when the missile hit them.
+        </p>
+        
+        <p style="text-align:center;">
+        <img src="Assets/Images/TopGoose/mapboundary.gif"
+        width=100%
+        style="border-radius: 6px"/>
         </p>
         `,
         staticThumbnail: "Assets/Images/topgoose.png",
