@@ -9,7 +9,7 @@ export var projects = [
         fullDescription: `
         <h3>Introduction</h3>
         <p>
-        TopDogEngine is a single-file 3D game prototyping framework that I developed as part of my thesis project at Malmö University.
+        TopDogEngine is a single-file 3D game prototyping framework that I developed as part of my <em>thesis project</em> at Malmö University.
         The goal of the project was to create a framework that would allow for rapid prototyping of 3D games in C++.
         </p>
 
@@ -32,14 +32,14 @@ export var projects = [
         year: 2025,
         summary: "A rage inducing physics platformer.",
         fullDescription: `
-        <h3>Introduction</h3>
+        <h2>Introduction</h2>
         <p>
-        Swing and a Miss was my submission to Game Lab Jam: VT 25 and it turned out to be the overall winner of the jam!
+        Swing and a Miss was my submission to <em>Game Lab Jam: VT 25</em> and it turned out to be the overall winner of the jam!
         It was developed in 48 hours, but I spent some time polishing it after the jam ended. It's still a work in progress,
         but I am very proud of the result and I'm planning on working it into a state where it can be released on Steam.
         </p>
 
-        <h3>Result</h3>
+        <h2>Result</h2>
         <p> You can play the latest version of the game on itch.io. </p>
 
         <iframe frameborder="0"
@@ -49,9 +49,9 @@ export var projects = [
             style="border-radius:6px"
             ></iframe>
 
-        <h3>Process</h3>
+        <h2>Process</h2>
         <p>
-        Will add more details about the process of making this game when I have the time.
+        
         </p>
         `,
         staticThumbnail: "Assets/Images/swingandamiss.png",
@@ -181,25 +181,25 @@ export var projects = [
         year: "2024",
         summary: "A first person shooter with a summer theme.",
         fullDescription: `
-        <h3>Introduction</h3>
+        <h2>Introduction</h2>
         <p>
-        Heat Delirium was developed in 48 hours for the Game Lab Jam: VT 24.
+        Heat Delirium was developed in 48 hours for the <em>Game Lab Jam: VT 24</em>.
         </p>
 
-        <h3>Result</h3>
+        <h2>Result</h2>
         <p>
         You can play this game on itch.io.
         </p>
-
+        
         <iframe frameborder="0"
         src="https://itch.io/embed/2746817?bg_color=f7db41&amp;fg_color=222222&amp;link_color=fa5c5c&amp;border_color=c5b153"
         width="552"
         height="167"
         ></iframe>
 
-        <h3>Process</h3>
+        <h2>Process</h2>
         <p>
-        Will add more details about the process when I have the time.
+        
         </p>
         `,
         staticThumbnail: "Assets/Images/heatdelirium.png",
@@ -211,19 +211,26 @@ export var projects = [
         year: "2024",
         summary: "A chaotic package delivery game.",
         fullDescription: `
-        <h3>Introduction</h3>
+        <h2>Introduction</h2>
         <p>
-        Developed as part of the 'Applied Software Architecture' course a Malmö University.
+        Developed as part of the <em>Applied Software Architecture</em> course a Malmö University.
         </p>
 
-        <h3>Result</h3>
+        <h2>Result</h2>
         <p>
-        Will add the results when I have the time.
+        
         </p>
 
-        <h3>Process</h3>
+        <h2>Process</h2>
+        
+        <h3>Main Menu</h3>
         <p>
-        Will add the  process when I have the time.
+
+        </p>
+        
+        <h3>Package Distribution</h3>
+        <p>
+
         </p>
         `,
         staticThumbnail: "Assets/Images/maketntgreatagain.png",
@@ -259,19 +266,37 @@ export var projects = [
         year: "2024",
         summary: "A simple custom 2D physics engine in Unity.",
         fullDescription: `
-        <h3>Introduction</h3>
+        <h2>Introduction</h2>
         <p>
-        Developed as part of the 'Physics for Digital Games' course a Malmö University.
+        Developed as part of the <em>Physics for Digital Games</em> course a Malmö University. My task was to make my own implementation of the <em>Rigidbody 2D</em> component in <em>Unity</em>. I also needed to implement my own circle-circle and circle-plane collision system to use for my <em>collision responses</em>. On top of this, I created some <em>external forces</em> to interact with the rigidbodies such as <em>wind</em>, <em>buoyancy</em> and <em>explosions</em>.
         </p>
 
-        <h3>Result</h3>
+        <h2>Process</h2>
+
+        <h3>Collision detection</h3>
         <p>
-        Will add more details about the results when I have the time.
+
+        </p>
+        
+        <h3>Collision response</h3>
+        <p>
+        
         </p>
 
-        <h3>Process</h3>
+        <h3>External forces</h3>
+        <h4>Wind</h4>
         <p>
-        Will add more details about the process when I have the time.
+        
+        </p>
+
+        <h4>Buoyancy</h4>
+        <p>
+        
+        </p>
+
+        <h4>Explosions</h4>
+        <p>
+        
         </p>
         `,
         staticThumbnail: "Assets/Images/2dphysicsengine.png",
@@ -283,22 +308,22 @@ export var projects = [
         year: "2024",
         summary: "A DirectX11 3D rendering framework.",
         fullDescription: `
-        <h3>Introduction</h3>
+        <h2>Introduction</h2>
         <p>
-        Developed as part of the 'Computer graphics and modeling' course at Malmö University.
+        Developed as part of the <em>Computer graphics and modeling</em> course at Malmö University.
         The goal of the assignment was to extend the a base framework provided by our teacher to add
         rendering capabilities and using methods such as Phong shading and cube mapped reflections to achieve better
         looking graphics.
         </p>
 
-        <h3>Result</h3>
+        <h2>Result</h2>
         <p>
-        Will add more details about the results when I have the time.
+        
         </p>
 
-        <h3>Process</h3>
+        <h2>Process</h2>
         <p>
-        Will add more details about the process when I have the time.
+        
         </p>
         `,
         staticThumbnail: "Assets/Images/edurend.png",
