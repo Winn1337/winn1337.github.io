@@ -2,7 +2,7 @@
 // This file is loaded in both index.js and project-detail.js.
 
 export var projects = [
-    { // TopDogEngine - Not included
+    { // TopDogEngine
         title: "TopDogEngine",
         year: 2025,
         summary: "A single-file 3D game prototyping framework.",
@@ -34,9 +34,7 @@ export var projects = [
         fullDescription: `
         <h2>Introduction</h2>
         <p>
-        Swing and a Miss was my submission to <em>Game Lab Jam: VT 25</em> and it turned out to be the overall winner of the jam!
-        It was developed in 48 hours, but I spent some time polishing it after the jam ended. It's still a work in progress,
-        but I am very proud of the result and I'm planning on working it into a state where it can be released on Steam.
+        Swing and a Miss was my submission to <em>Game Lab Jam: VT 25</em> and it turned out to be the overall winner of the jam! It was developed in 48 hours, but I spent some time polishing it after the jam ended. It's still a work in progress, but I am very proud of the result and I'm planning on working it into a state where it can be released on Steam.
         </p>
 
         <h2>Result</h2>
@@ -51,7 +49,7 @@ export var projects = [
 
         <h2>Process</h2>
         <p>
-        
+        The process is still ongoing, but I will add more details about the process when I have worked further on the game.
         </p>
         `,
         staticThumbnail: "Assets/Images/swingandamiss.png",
@@ -170,7 +168,7 @@ export var projects = [
         language: ["C#", "Unity"],
         isValid: true
     },
-    { // WFC RTS - Not included
+    { // WFC RTS
         title: "WFC RTS",
         year: "2024",
         summary: "A Wave Function Collapse RTS level generator.",
@@ -251,11 +249,11 @@ export var projects = [
 
         </p>
         `,
-        staticThumbnail: "Assets/Images/maketntgreatagain.png",
+        //staticThumbnail: "Assets/Images/maketntgreatagain.png",
         teamSize: 6,
         language: ["C#", "Unity"]
     },
-    { // Untitled Physics Game - Not included
+    { // Untitled Physics Game
         title: "Untitled Physics Game",
         year: "2024",
         summary: "A physics based car game.",
@@ -293,13 +291,33 @@ export var projects = [
 
         <h3>Collision detection</h3>
         <p>
-
+        The circle-circle collision detection is a simple <em>distance check</em> between the two circles. If the distance is less than the sum of the two radii, a collision has occurred. If the two circles are already moving away from each other, the collision is ignored.
+        </p>
+        <p>
+        The circle-plane collision detection is a bit more complex, since I didn't want to treat the plane as though it was infinite but more like a <em>line segment</em>. I used the <em>dot product</em> to determine the orthogonal and parallel components of the distance between the circle and the plane.
+        </p>
+        <p style="text-align:center;">
+        <img src="Assets/Images/2DPhysicsEngine/circleplanecollisiondetection.png"/>
         </p>
         
         <h3>Collision response</h3>
         <p>
-        
+        The collision detection and response runs multiple iterations per time-step to prevent issues when multiple objects are colliding at the same time. To do this, I tweaked the <em>number of iterations</em> and the <em>error reduction</em> values to get stable results. After calculating the new positions and velocities of the objects, the results are multiplied by the error reduction parameter which makes each iteration less drastic than if all collisions were to be fully "corrected" in a single sweep. The error reduction parameter I settled on <em>5 iterations</em> per time-step and an <em>error reduction of 20%</em>. The formula for calculating the new velocity of colliding object is:
         </p>
+
+        <p style="text-align:center;">
+        <em>v1 = (m2 / (m1 + m2)) × v2 </em>
+        </p>
+        <p style="text-align:center;">
+        <em>v2 = (m1 / (m1 + m2)) × v1 </em>
+        </p>
+
+        <p style="text-align:center;">
+        <img src="Assets/Images/2DPhysicsEngine/collisionresponse.png"/>
+        </p>
+
+        <p>
+        The collision solving method was implemented to work on both circle-circle and circle-plane collisions. I solved the collisions by using a <em>Contact class</em> containing <em>rigidBody A</em>, <em>rigidBody B</em>, <em>collision normal</em> and <em>penetration</em>. If an object was a plane, it was sent to the contact class as null. Therefore, it was convenient to use the <em>inverse mass</em> of the objects, since a solid object has an infinite mass which translates to a zero inverse mass.
 
         <p style="text-align:center;">
         <img src="Assets/Images/2DPhysicsEngine/collision.gif"
@@ -310,7 +328,17 @@ export var projects = [
         <h3>External forces</h3>
         <h4>Wind</h4>
         <p>
-        
+        Wind is a simple force that is applied to the rigidbody in the direction of the wind. I have tried to keep the implementation as true to reality as possible, so that inputting real values would give a realistic result. It takes into account the <em>wind force</em>, <em>wind direction</em>, <em>air density</em>, <em>drag coefficient</em> and <em>exposed area</em>. The wind force is calculated using the following formula:
+
+        <p style="text-align:center;">
+        <em>appliedWindForce = windForce × windDirection × airDensity × dragCoefficient × exposedArea</em>
+        </p>
+
+        I decided to set the air density to 1.29 kg/m³, which is the regular density of air. The drag coefficient is set to 0.47, which is the drag coefficient of a sphere. The exposed area is set to the area of the circle, which is calculated using the following formula:
+
+        <p style="text-align:center;">
+        <em>exposedArea = PI × radius × radius</em>
+        </p>
         </p>
 
         <p style="text-align:center;">
@@ -321,7 +349,20 @@ export var projects = [
 
         <h4>Buoyancy</h4>
         <p>
+        This was my favorite force to implement due to how impactful the effect is. I used the <em>Archimedes principle</em> to calculate the buoyancy force. The buoyancy force is equal to the weight of the fluid displaced by the object. The formula for calculating the buoyancy force is:
+
+        <p style="text-align:center;">
+        <em>exposedArea = submergedVolume × fluidDensity × radius × gravity</em>
+        </p>
+
+        The formula for calculating the submerged volume is:
         
+        <p style="text-align:center;">
+        <em>submergedVoume = r × r × radius × Arccos(h* - 1 / r) - (r - h) × sqrt(r * r - (r - h) * (r - h))</em>
+        </p>
+
+        *h is the relative water level for the object, minus the radius of the object.
+
         </p>
 
         <p style="text-align:center;">
@@ -332,7 +373,10 @@ export var projects = [
 
         <h4>Explosions</h4>
         <p>
-        
+        The explosion force is applied in a similar way to the wind force, but it also takes into account the <em>explosion radius</em>. It uses the relative distance to the explosion center to linearly interpolate between the explosion force and zero.
+        </p>
+        <p style="text-align:center;">
+        <img src="Assets/Images/2DPhysicsEngine/explosionforce.png"/>
         </p>
 
         <p style="text-align:center;">
