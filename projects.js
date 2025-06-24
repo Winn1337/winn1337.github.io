@@ -9,21 +9,21 @@ export var projects = [
         fullDescription: `
         <h3>Introduction</h3>
         <p>
-        TopDogEngine is a single-file 3D game prototyping framework that I developed as part of my <em>thesis project</em> at Malmö University.
+        TopDogEngine is a single-file 3D game prototyping framework that I helped develop as part of my <em>bachelor thesis</em> at Malmö University.
         The goal of the project was to create a framework that would allow for rapid prototyping of 3D games in C++.
         </p>
 
         <h3>Result</h3>
         <p>
-        Will add the results when I have the time.
+        The paper can be accessed <a href="https://mau.diva-portal.org/smash/record.jsf?pid=diva2:1975060" target="_blank">here</a>.
         </p>
 
         <h3>Process</h3>
         <p>
-        Will add the  process when I have the time.
+        
         </p>
         `,
-        //staticThumbnail: [],
+        staticThumbnail: "Assets/Images/topdogengine.png",
         teamSize: 2,
         language: ["C++", "Vulkan"]
     },
