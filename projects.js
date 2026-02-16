@@ -2,6 +2,38 @@
 // This file is loaded in both index.js and project-detail.js.
 
 export var projects = [
+    { // Ballin Santa
+        title: "Ballin Santa",
+        year: 2025,
+        summary: "Jolly little arcade game made for TriJam #351.",
+        fullDescription: `
+        <h2>Introduction</h2>
+        <p>
+        Developed for TriJam #351 in 3 hours for the theme "Santa’s Gift Management".
+        </p>
+
+        <p>
+        It’s almost time for Christmas, and Santa is completely on his own. With the elves nowhere to be found, presents start flying his way faster and faster. It’s up to you to keep the sleigh stocked before everything falls apart.
+        </p>
+
+        <p>
+        Presents are hurled toward Santa at increasing speed, and you’ll need quick movement and decent aim to catch and toss them into the sleigh. Drop too many, and Christmas is cancelled.
+        </p>
+
+        <h2>Result</h2>
+        
+        <p> You can play the latest version of the game on itch.io. </p>
+        <iframe frameborder="0"
+            src="https://itch.io/embed/4134012?linkback=true&amp;bg_color=6495ED&amp;fg_color=FFFFFF&amp;link_color=AC3232&amp;border_color=6495ED;b_radius=20;"
+            width="552"
+            height="167"
+            style="border-radius:6px"
+            ></iframe>
+        `,
+        staticThumbnail: "Assets/Images/ballinsanta.png",
+        teamSize: 1,
+        language: ["GDScript", "Godot"]
+    },
     { // TopDogEngine
         title: "TopDogEngine",
         year: 2025,
