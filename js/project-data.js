@@ -1,5 +1,5 @@
 // Contains project data. Projects without a thumbnail will not be displayed on the main page.
-// This file is loaded in both index.js and project-detail.js.
+// This file is loaded in projects.js and project-detail.js.
 
 export var projects = [
     { // Ballin Santa
@@ -30,7 +30,7 @@ export var projects = [
             style="border-radius:6px"
             ></iframe>
         `,
-        staticThumbnail: "Assets/Images/ballinsanta.png",
+        staticThumbnail: "../Assets/Images/ballinsanta.png",
         teamSize: 1,
         language: ["GDScript", "Godot"]
     },
@@ -49,13 +49,8 @@ export var projects = [
         <p>
         The paper can be accessed <a href="https://mau.diva-portal.org/smash/record.jsf?pid=diva2:1975060" target="_blank">here</a>.
         </p>
-
-        <h3>Process</h3>
-        <p>
-        
-        </p>
         `,
-        staticThumbnail: "Assets/Images/topdogengine.png",
+        staticThumbnail: "../Assets/Images/topdogengine.png",
         teamSize: 2,
         language: ["C++", "Vulkan"]
     },
@@ -78,13 +73,8 @@ export var projects = [
             height="167"
             style="border-radius:6px"
             ></iframe>
-
-        <h2>Process</h2>
-        <p>
-        The process is still ongoing, but I will add more details about the process when I have worked further on the game.
-        </p>
         `,
-        staticThumbnail: "Assets/Images/swingandamiss.png",
+        staticThumbnail: "../Assets/Images/swingandamiss.png",
         teamSize: 1,
         language: ["C#", "Unity"]
     },
@@ -126,7 +116,7 @@ export var projects = [
         </ol>
         <i>*In this case, I did a <em>capsule cast</em> instead of a ray cast, as this is a more accurate representation of the player.</i>
         </p>
-        <img src="Assets/Images/ProjectSalamanoid/collideandslide.png"
+        <img src="../Assets/Images/ProjectSalamanoid/collideandslide.png"
         style="position: relative; transform-origin: center;" width=100%/>
         <p>
         This was fun to implement and I learned a lot from it, but while working on it I realized that it had a couple of drawbacks. I had mostly tested the movement in simple environments with right angles and flat surfaces, but when we started testing it in the actual game environment, I quickly realized that it was not very robust. The player was able to phase through walls in certain nieche cases, such as when walking into a slanted ceiling. The team needed help on other parts of the game, so I decided to scrap my implementation and use the built-in <em>Unity CharacterController</em> instead. This was a good decision, as it allowed me to focus on other parts of the game and I was able to get the movement working very quickly. It was good enough and I was able to add a lot of features on top of it to make it feel more natural.
@@ -137,7 +127,7 @@ export var projects = [
         </p>
 
         <p style="text-align:center;">
-        <img src="Assets/Images/ProjectSalamanoid/movement.gif"
+        <img src="../Assets/Images/ProjectSalamanoid/movement.gif"
         width=100%
         style="border-radius: 6px"/>
         </p>
@@ -166,7 +156,7 @@ export var projects = [
         </p>
 
         <p style="text-align:center;">
-        <img src="Assets/Images/ProjectSalamanoid/climbing.gif"
+        <img src="../Assets/Images/ProjectSalamanoid/climbing.gif"
         width=100%
         style="border-radius: 6px"/>
         </p>
@@ -185,7 +175,7 @@ export var projects = [
         </p>
 
         <p style="text-align:center;">
-        <img src="Assets/Images/ProjectSalamanoid/interactable.gif"
+        <img src="../Assets/Images/ProjectSalamanoid/interactable.gif"
         width=100%
         style="border-radius: 6px"/>
         </p>
@@ -195,7 +185,7 @@ export var projects = [
         During the production phase, we had to do a lot of <em>internal play-testing</em>. It was very time consuming however, when we wanted to test mechanics that were only present in the later parts of the game since we would have to replay the entire game up to that point to reach them. Therefore, I created a script that allowed us to <em>teleport</em> to the elevators on each level. It also allowed us to enter a <em>noclip mode</em> and a <em>god mode</em>. This proved very useful and saved us a great deal of time.
         </p>
         `,
-        staticThumbnail: "Assets/Images/projectsalamanoid.png",
+        staticThumbnail: "../Assets/Images/projectsalamanoid.png",
         teamSize: 9,
         language: ["C#", "Unity"],
         isValid: true
@@ -220,7 +210,7 @@ export var projects = [
         Will add more details about the process when I have the time.
         </p>
         `,
-        //staticThumbnail: "Assets/Images/RTSWFC/image8.png",
+        //staticThumbnail: "../Assets/Images/RTSWFC/image8.png",
         teamSize: 4,
         language: ["C#", "Unity"]
     },
@@ -244,13 +234,8 @@ export var projects = [
         width="552"
         height="167"
         ></iframe>
-
-        <h2>Process</h2>
-        <p>
-        
-        </p>
         `,
-        staticThumbnail: "Assets/Images/heatdelirium.png",
+        staticThumbnail: "../Assets/Images/heatdelirium.png",
         teamSize: 3,
         language: ["C#", "Unity"]
     },
@@ -281,7 +266,7 @@ export var projects = [
 
         </p>
         `,
-        //staticThumbnail: "Assets/Images/maketntgreatagain.png",
+        //staticThumbnail: "../Assets/Images/maketntgreatagain.png",
         teamSize: 6,
         language: ["C#", "Unity"]
     },
@@ -305,7 +290,7 @@ export var projects = [
         Will add more details about the process when I have the time.
         </p>
         `,
-        //staticThumbnail: "Assets/Images/untitledphysicsgame.png",
+        //staticThumbnail: "../Assets/Images/untitledphysicsgame.png",
         teamSize: 1,
         language: ["C#", "Unity"]
     },
@@ -329,7 +314,7 @@ export var projects = [
         The circle-plane collision detection is a bit more complex, since I didn't want to treat the plane as though it was infinite but more like a <em>line segment</em>. I used the <em>dot product</em> to determine the orthogonal and parallel components of the distance between the circle and the plane.
         </p>
         <p style="text-align:center;">
-        <img src="Assets/Images/2DPhysicsEngine/circleplanecollisiondetection.png"/>
+        <img src="../Assets/Images/2DPhysicsEngine/circleplanecollisiondetection.png"/>
         </p>
         
         <h3>Collision response</h3>
@@ -345,14 +330,14 @@ export var projects = [
         </p>
 
         <p style="text-align:center;">
-        <img src="Assets/Images/2DPhysicsEngine/collisionresponse.png"/>
+        <img src="../Assets/Images/2DPhysicsEngine/collisionresponse.png"/>
         </p>
 
         <p>
         The collision solving method was implemented to work on both circle-circle and circle-plane collisions. I solved the collisions by using a <em>Contact class</em> containing <em>rigidBody A</em>, <em>rigidBody B</em>, <em>collision normal</em> and <em>penetration</em>. If an object was a plane, it was sent to the contact class as null. Therefore, it was convenient to use the <em>inverse mass</em> of the objects, since a solid object has an infinite mass which translates to a zero inverse mass.
 
         <p style="text-align:center;">
-        <img src="Assets/Images/2DPhysicsEngine/collision.gif"
+        <img src="../Assets/Images/2DPhysicsEngine/collision.gif"
         width=100%
         style="border-radius: 6px"/>
         </p>
@@ -374,7 +359,7 @@ export var projects = [
         </p>
 
         <p style="text-align:center;">
-        <img src="Assets/Images/2DPhysicsEngine/wind.gif"
+        <img src="../Assets/Images/2DPhysicsEngine/wind.gif"
         width=100%
         style="border-radius: 6px"/>
         </p>
@@ -398,7 +383,7 @@ export var projects = [
         </p>
 
         <p style="text-align:center;">
-        <img src="Assets/Images/2DPhysicsEngine/buoyancy.gif"
+        <img src="../Assets/Images/2DPhysicsEngine/buoyancy.gif"
         width=100%
         style="border-radius: 6px"/>
         </p>
@@ -408,16 +393,16 @@ export var projects = [
         The explosion force is applied in a similar way to the wind force, but it also takes into account the <em>explosion radius</em>. It uses the relative distance to the explosion center to linearly interpolate between the explosion force and zero.
         </p>
         <p style="text-align:center;">
-        <img src="Assets/Images/2DPhysicsEngine/explosionforce.png"/>
+        <img src="../Assets/Images/2DPhysicsEngine/explosionforce.png"/>
         </p>
 
         <p style="text-align:center;">
-        <img src="Assets/Images/2DPhysicsEngine/explosions.gif"
+        <img src="../Assets/Images/2DPhysicsEngine/explosions.gif"
         width=100%
         style="border-radius: 6px"/>
         </p>
         `,
-        staticThumbnail: "Assets/Images/2dphysicsengine.png",
+        staticThumbnail: "../Assets/Images/2dphysicsengine.png",
         teamSize: 1,
         language: ["C#", "Unity"]
     },
@@ -433,18 +418,8 @@ export var projects = [
         rendering capabilities and using methods such as Phong shading and cube mapped reflections to achieve better
         looking graphics.
         </p>
-
-        <h2>Result</h2>
-        <p>
-        
-        </p>
-
-        <h2>Process</h2>
-        <p>
-        
-        </p>
         `,
-        staticThumbnail: "Assets/Images/edurend.png",
+        staticThumbnail: "../Assets/Images/edurend.png",
         teamSize: 1,
         language: ["C++", "HLSL", "DirectX11"]
     },
@@ -459,14 +434,12 @@ export var projects = [
         </p>
 
         <h2>Game Trailer</h2>
-        <p style="text-align:center">
         <iframe
-        style="position: relative; transform-origin: center; width : 100%; height: 100%; aspect-ratio: 16/9;"
+        style="position: relative; transform-origin: center; width : 66%; height: auto; aspect-ratio: 16/9;"
         src="https://www.youtube.com/embed/WYVJrY2zlsw?si=xcM--pNSDGH8ZpMH"
         frameborder="0"
         allowfullscreen
         ></iframe>
-        </p>
 
         <h2>Process</h2>
 
@@ -492,7 +465,7 @@ export var projects = [
         </p>
 
         <p style="text-align:center;">
-        <img src="Assets/Images/TopGoose/ondeath.gif"
+        <img src="../Assets/Images/TopGoose/ondeath.gif"
         width=100%
         style="border-radius: 6px"/>
         </p>
@@ -511,12 +484,12 @@ export var projects = [
         </p>
         
         <p style="text-align:center;">
-        <img src="Assets/Images/TopGoose/mapboundary.gif"
+        <img src="../Assets/Images/TopGoose/mapboundary.gif"
         width=100%
         style="border-radius: 6px"/>
         </p>
         `,
-        staticThumbnail: "Assets/Images/topgoose.png",
+        staticThumbnail: "../Assets/Images/topgoose.png",
         teamSize: 5,
         language: ["C#", "Unity"]
     },

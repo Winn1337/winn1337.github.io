@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta http-equiv="refresh" content="0;url=projects.html" />
     <title>Johannes Widén</title>
     <link rel="icon" href="Assets/Images/icon.png" type="image/png" />
     <link rel="stylesheet" href="style.css" />
@@ -14,18 +13,26 @@
     <script type="module" src="js/header.js"></script>
     <div id="header"></div>
 
-    <main>
-        <h1>Hello, World!</h1>
-
-        <div style="text-align: center;">
-        <h2>🚧⏳🔄🔜</h2>
-        <p>My homepage is currently under construction.</p>
-        <p>Feel free to visit any other page from the navigation bar up top!</p>
+    <main class="blog-post">
+        <div id="blog-post">
+            <script type="module" src="js/blog-post.js"></script>
         </div>
+
+        <h2>Comments</h2>
+        <div class="comments" id="comments">
+            <p>
+                Loading...
+            </p>
+        </div>
+        <form class="commentForm" id="commentForm">
+            <input type="text" name="name" placeholder="Name" required />
+            <textarea name="comment" placeholder="Message" required></textarea>
+            <button type="submit">Post comment</button>
+        </form>
     </main>
-    <script type="module" src="js/index.js"></script>
-    
+
     <script type="module" src="js/footer.js"></script>
     <div id="footer"></div>
+
 </body>
 </html>
