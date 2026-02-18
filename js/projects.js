@@ -17,4 +17,5 @@ if (container) {
         container.appendChild(card);
     });
 }
+
 document.body.classList.add("ready");

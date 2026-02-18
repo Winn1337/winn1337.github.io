@@ -1,46 +1,41 @@
-var projects;
+import { projects } from '../js/project-data.js';
 
 function getProjectByTitle(title) {
     return projects.find(p => p.title === title);
 }
 
-import('../js/project-data.js?v=' + new Date().getTime())
-        .then(module => {
-            projects = module.projects;
-            const params = new URLSearchParams(window.location.search);
-            const title = params.get("title");
-            const project = getProjectByTitle(title);
-            const container = document.getElementById("project-detail");
+const params = new URLSearchParams(window.location.search);
+const title = params.get("title");
+const project = getProjectByTitle(title);
+const container = document.getElementById("project-detail");
+if (!project) {
+    container.innerHTML = `<p>Project not found.</p>`;
+}
+else {
+    document.title = `${project.title}`;
+    
+    var link = document.querySelector("link[rel~='icon']");
+    if (!link) {
+        link = document.createElement('link');
+        link.rel = 'icon';
+        document.head.appendChild(link);
+    }
+    link.href = `${project.staticThumbnail}`;
+    //<img src="${project.staticThumbnail}" style="position: absolute; top: 66px; right: 25%; width: min(20%, 400px); height: auto; z-index: 0; border-radius:6px;"/>
+    container.innerHTML = `
+    <div class="project-header">
+    <p>
+    <img src="${project.staticThumbnail}" style="width: 35%; float: right; margin: 20px; border-radius: 6px;"/>
+    <h1>${project.title} ${project.year ? `(${project.year})` : ''}</h1>
+    <p style="margin-top: -15px; margin-bottom: 30px"><i>${project.summary}</i></p>
+    <p><strong>Team Size:</strong> ${project.teamSize ?? 'N/A'}</p>
+    <p><strong>Languages:</strong> ${project.language?.join(', ') || 'N/A'}</p>
+    </p>
+    </div>
+    <br>
+    <div class="project-body">
+    ${project.fullDescription ? `${project.fullDescription}` : ''}
+    </div>`;
+}
 
-            if (!project) {
-                container.innerHTML = `<p>Project not found.</p>`;
-                return;
-            }
-            document.title = `${project.title}`;
-            
-            var link = document.querySelector("link[rel~='icon']");
-            if (!link) {
-                link = document.createElement('link');
-                link.rel = 'icon';
-                document.head.appendChild(link);
-            }
-            link.href = `${project.staticThumbnail}`;
-            //<img src="${project.staticThumbnail}" style="position: absolute; top: 66px; right: 25%; width: min(20%, 400px); height: auto; z-index: 0; border-radius:6px;"/>
-            container.innerHTML = `
-            <div class="project-header">
-            <p>
-            <img src="${project.staticThumbnail}" style="width: 35%; float: right; margin: 20px; border-radius: 6px;"/>
-            <h1>${project.title} ${project.year ? `(${project.year})` : ''}</h1>
-            <p style="margin-top: -15px; margin-bottom: 30px"><i>${project.summary}</i></p>
-            <p><strong>Team Size:</strong> ${project.teamSize ?? 'N/A'}</p>
-            <p><strong>Languages:</strong> ${project.language?.join(', ') || 'N/A'}</p>
-            </p>
-            </div>
-            <br>
-            <div class="project-body">
-            ${project.fullDescription ? `${project.fullDescription}` : ''}
-            </div>`;
-
-        document.body.classList.add("ready");
-        })
-    .catch(error => console.error('Error loading projects:', error));
+document.body.classList.add("ready");
