@@ -34,7 +34,7 @@ main {
     /* border-bottom: 1px solid var(--background-secondary); */
     /* border-top: 1px solid var(--background-secondary); */
     /* padding: 0px 20px; */
-    margin: 0px 256px;
+    margin: 0px 15%;
     flex: 1;
 }
 
@@ -46,6 +46,16 @@ h1 {
 
 a {
     color: var(--primary);
+}
+
+@media screen and (max-width: 75vh) {
+    main {
+        margin: 0px 50px;
+    }
+
+    iframe {
+        max-width: 100%;
+    }
 }
 
 /*
@@ -81,6 +91,23 @@ nav li:hover {
     background-color: var(--background-secondary);
 }
 
+@media screen and (max-width: 75vh) {
+    nav ul {
+        text-align: center;
+        width: 100%;
+        padding: 0;
+    }
+
+    nav li {
+        float: none;
+        padding: 10px 0px;
+    }
+
+    nav a {
+        text-decoration: none;
+    }
+}
+
 /*
     Footer
 */
@@ -89,6 +116,12 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 20px;
+}
+
+@media screen and (max-width: 75vh) {
+    footer {
+        margin-bottom: 20px;
+    }
 }
 
 /*
@@ -123,6 +156,16 @@ a.project-card:hover {
 a.project-card img {
     width: 100%;
     border-radius: 8px;
+}
+
+@media screen and (max-width: 75vh) {
+    #project-container {
+        gap: 50px 0px;
+    }
+
+    a.project-card {
+    width: 100%;
+    }
 }
 
 /*
@@ -162,6 +205,17 @@ a.blog-card {
 
 a.blog-card:hover {
     transform: scale(1.02);
+}
+
+@media screen and (max-width: 75vh) {
+
+    #blog-container {display: flex;
+    gap: 50px 0;
+    }
+
+    a.blog-card {
+        width: 100%;
+    }
 }
 
 /*
@@ -223,4 +277,41 @@ a.blog-card:hover {
     background-color: var(--on-background);
     color: var(--background);
     cursor: pointer;
+}
+@media screen and (max-width: 75vh) {
+
+    .blog-post {
+        width: calc(100% - 50px);
+    }
+
+    .comments {
+        width: 100%;
+    }
+
+    .commentForm {
+        margin-top: 50px;
+        width: 100%;
+    }
+
+    .commentForm button {
+        width: 100%;
+    }
+}
+
+/*
+    About me
+*/
+
+img {
+    width: calc(460px * calc(100vw / 1920px));
+    margin: 0px calc(64px * calc(100vw / 1920px));
+}
+
+@media screen and (max-width: 75vh) {
+
+    img {
+        margin: 30px auto;
+        margin-top: 0px;
+        width: 100%;
+    }
 }
