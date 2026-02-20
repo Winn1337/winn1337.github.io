@@ -185,7 +185,8 @@ a.project-card img {
 /*
     Blog page
 */
-#blog-container {display: flex;
+#blog-container {
+    display: flex;
     flex-wrap: wrap;
     gap: 25px 3%;
     margin: auto;
@@ -302,16 +303,7 @@ a.blog-card:hover {
     About me
 */
 
-img {
+.portrait {
     width: calc(460px * calc(100vw / 1920px));
     margin: 0px calc(64px * calc(100vw / 1920px));
-}
-
-@media screen and (max-width: 75vh) {
-
-    img {
-        margin: 30px auto;
-        margin-top: 0px;
-        width: 100%;
-    }
 }
