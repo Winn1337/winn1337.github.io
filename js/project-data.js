@@ -2,6 +2,38 @@
 // This file is loaded in projects.js and project-detail.js.
 
 export var projects = [
+    { // Defusineer
+        title: "Defusineer",
+        year: 2026,
+        summary: "Puzzle game made for TriJam #368.",
+        fullDescription: `
+        <h2>Introduction</h2>
+        <p>
+        Created in 5 hours for fun and <a href="https://itch.io/jam/trijam-368">TriJam #368</a> with the theme "Let's Build A Machine".
+        </p>
+
+        <p>
+        Quick! You are super close close to becoming a special operations engineer specializing in bomb defusal. Your final exam is to disarm a real bomb by building the defuser from spare parts. We hope at least one student passes the test...
+        </p>
+
+        <p>
+        Inspired by <em>Keep Talking and Nobody Explodes</em> and  Jackbox's <em>Bomb Corp</em>.
+        </p>
+
+        <h2>Result</h2>
+
+        <p> You can play the latest version of the game on itch.io. </p>
+        <iframe frameborder="0"
+            src="https://itch.io/embed/4492658?linkback=true&amp;bg_color=4A5064&amp;fg_color=ff9c45&amp;link_color=30bf30&amp;border_color=6c7286;b_radius=20;"
+            width="552"
+            height="167"
+            style="border-radius:6px"
+            ></iframe>
+        `,
+        staticThumbnail: "../Assets/Images/defusineer.png",
+        teamSize: 1,
+        language: ["GDScript", "Godot"]
+    },
     { // Balloon Courier
         title: "Balloon Courier",
         year: 2026,
