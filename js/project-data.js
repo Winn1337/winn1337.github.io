@@ -2,6 +2,34 @@
 // This file is loaded in projects.js and project-detail.js.
 
 export var projects = [
+    { // Text and Drive
+        title: "Text and Drive",
+        year: 2026,
+        summary: "Typing game made for TriJam #372.",
+        fullDescription: `
+        <h2>Introduction</h2>
+        <p>
+        Created in 3 hours for fun and <a href="https://itch.io/jam/trijam-372">TriJam #372</a> with the theme "Red Light, Green Light", which ended up as the winning game!
+        </p>
+
+        <p>
+        Text and drive. The faster you text, the faster you will drive. Be careful to not misspell or it will reflect on your driving, and don't forget to keep your eyes on the road!
+        </p>
+
+        <h2>Result</h2>
+
+        <p> You can play the latest version of the game on itch.io. </p>
+        <iframe frameborder="0"
+            src="https://itch.io/embed/4587608?linkback=true&amp;bg_color=464643&amp;fg_color=ffffff&amp;link_color=d4a304&amp;border_color=6b6b68;b_radius=20;"
+            width="552"
+            height="167"
+            style="border-radius:6px"
+            ></iframe>
+        `,
+        staticThumbnail: "../Assets/Images/textanddrive.png",
+        teamSize: 1,
+        language: ["GDScript", "Godot"]
+    },
     { // Defusineer
         title: "Defusineer",
         year: 2026,
@@ -34,40 +62,40 @@ export var projects = [
         teamSize: 1,
         language: ["GDScript", "Godot"]
     },
-    { // Balloon Courier
-        title: "Balloon Courier",
-        year: 2026,
-        summary: "Relaxing delivery game made for TriJam #367.",
-        fullDescription: `
-        <h2>Introduction</h2>
-        <p>
-        Created over a weekend for fun and <a href="https://itch.io/jam/trijam-367">TriJam #367</a> with the theme "The Only Way is Up".
-        </p>
+    // { // Balloon Courier
+    //     title: "Balloon Courier",
+    //     year: 2026,
+    //     summary: "Relaxing delivery game made for TriJam #367.",
+    //     fullDescription: `
+    //     <h2>Introduction</h2>
+    //     <p>
+    //     Created over a weekend for fun and <a href="https://itch.io/jam/trijam-367">TriJam #367</a> with the theme "The Only Way is Up".
+    //     </p>
 
-        <p>
-        Deliver all of your packages by traveling around the island and stopping by near the recipients. This game has no enemies, no time limit, no loss condition at all. Just float along the island and relax :) Hope you enjoy!
-        </p>
+    //     <p>
+    //     Deliver all of your packages by traveling around the island and stopping by near the recipients. This game has no enemies, no time limit, no loss condition at all. Just float along the island and relax :) Hope you enjoy!
+    //     </p>
 
-        <h2>Process</h2>
+    //     <h2>Process</h2>
 
-        <p>
-        All models and animations were made by yours truly using Blender, Affinity Photo, and Godot's IK system.
-        </p>
+    //     <p>
+    //     All models and animations were made by yours truly using Blender, Affinity Photo, and Godot's IK system.
+    //     </p>
 
-        <h2>Result</h2>
+    //     <h2>Result</h2>
         
-        <p> You can play the latest version of the game on itch.io. </p>
-        <iframe frameborder="0"
-            src="https://itch.io/embed/4469757?linkback=true&amp;bg_color=364989&amp;fg_color=ffffff&amp;link_color=6ffa5b&amp;border_color=3c8da5;b_radius=20;"
-            width="552"
-            height="167"
-            style="border-radius:6px"
-            ></iframe>
-        `,
-        staticThumbnail: "../Assets/Images/ballooncourier.png",
-        teamSize: 1,
-        language: ["GDScript", "Godot"]
-    },
+    //     <p> You can play the latest version of the game on itch.io. </p>
+    //     <iframe frameborder="0"
+    //         src="https://itch.io/embed/4469757?linkback=true&amp;bg_color=364989&amp;fg_color=ffffff&amp;link_color=6ffa5b&amp;border_color=3c8da5;b_radius=20;"
+    //         width="552"
+    //         height="167"
+    //         style="border-radius:6px"
+    //         ></iframe>
+    //     `,
+    //     staticThumbnail: "../Assets/Images/ballooncourier.png",
+    //     teamSize: 1,
+    //     language: ["GDScript", "Godot"]
+    // },
     { // Ballin Santa
         title: "Ballin Santa",
         year: 2025,
