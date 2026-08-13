@@ -1,7 +1,7 @@
 /*
 Keep this commented in case we need to debug the CSS later.
 */
-/* div
+/* *
 {
   border: 1px solid #ccc;
 } */
@@ -16,20 +16,33 @@ Keep this commented in case we need to debug the CSS later.
 }
 
 :root {
-  --bg-color: #101010;
-  --second-bg-color: #080808;
+  --bg-color: rgb(20, 20, 20);
+  --second-bg-color: white;
   --text-color: white;
-  --main-color: #6b44d6;
+  --main-color: rgb(113, 52, 182);
+  --secondary-color: rgb(135, 73, 207);
 }
 
 html {
   font-size: 60%;
-  overflow-x: hidden;
+  /* overflow-x: hidden;
+  overflow-y: hidden; */
+  width: 8.28in;
+  height: 11.69in;
+  margin: auto auto;
+
+  /* remove the border when printing */
+  /* border: 1px solid var(--text-color); */
 }
 
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
+  height: 100%;
+}
+
+strong {
+  color: var(--secondary-color);
 }
 
 .header {
@@ -66,33 +79,40 @@ body {
 } */
 
 main {
-  padding: 4rem 4rem;
+  /* padding: 4rem 2rem; */
+  height: 100%;
 }
 
 .column-group {
   display: flex;
   justify-content: space-between;
+  height: 100%;
 }
 
 .column {
-  padding: 0 1rem;
+  padding: 2rem 1rem;
+  height: 100%;
 }
 
 .left {
-  width: 35%;
+  width: 37%;
 }
 
 .right {
-  width: 65%;
+  width: 63%;
 }
 
 .card {
-  background-color: var(--second-bg-color);
+  /* background-color: var(--second-bg-color); */
   padding: 2rem;
+  /* padding: 2rem; */
   border-radius: 1rem;
   margin-bottom: 2rem;
-  box-shadow: 2px 2px 8px var(--main-color);
+  /* box-shadow: 0px 0px 10px var(--secondary-color); */
+  outline: 2px solid var(--main-color);
   /*color-mix(in srgb, var(--main-color) 100%, transparent)*/
+
+
 
   .title {
     font-size: 2rem;
@@ -106,9 +126,11 @@ main {
 
   a {
     color: var(--text-color);
+    font-size: 1.2rem;
   }
 
   .experience-list {
+
     .title {
       font-size: 1.5rem;
       font-weight: 600;
@@ -127,10 +149,6 @@ main {
       margin-bottom: 1rem;
     }
 
-    h2 {
-      margin-bottom: .5rem;
-    }
-
     h3 {
       margin-bottom: 1rem;
     }
@@ -138,7 +156,17 @@ main {
     ul {
       padding-left: 1rem;
       margin-bottom: 1.5rem;
+
+      li {
+        margin-bottom: 0.5rem;
+      }
     }
   }
+}
 
+.separator {
+  height: 1px;
+  background-color: color-mix(in srgb, var(--text-color) 33%, transparent);
+  /* box-shadow: 0px -8px 3px 1.5px var(--text-color); */
+  margin: 1rem 0;
 }
