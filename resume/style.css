@@ -20,7 +20,7 @@ Keep this commented in case we need to debug the CSS later.
   --second-bg-color: white;
   --text-color: white;
   --main-color: rgb(113, 52, 182);
-  --secondary-color: rgb(135, 73, 207);
+  --secondary-color: rgb(153, 92, 228);
 }
 
 html {
@@ -28,7 +28,8 @@ html {
   /* overflow-x: hidden;
   overflow-y: hidden; */
   width: 8.28in;
-  height: 11.69in;
+  height: 10.5in;
+  max-height: 10.5in;
   margin: auto auto;
 
   /* remove the border when printing */
@@ -96,6 +97,7 @@ main {
 
 .left {
   width: 37%;
+  background-color: rgb(12, 12, 12)
 }
 
 .right {
@@ -160,6 +162,24 @@ main {
       li {
         margin-bottom: 0.5rem;
       }
+    }
+  }
+}
+
+.skills {
+  ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+
+    li {
+      margin-right: 1rem;
+      margin-bottom: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 1rem;
+      background-color: var(--bg-color);
+      border: 1px solid var(--main-color);
     }
   }
 }
